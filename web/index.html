@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Light Alert ⚠️ - Vue HTML</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>⚠️ Red Light Alert — Affichage HTML du jeu Java</h1>
+    <p>
+      Cette page reproduit visuellement le prototype Java/Swing pour l'afficher dans le navigateur
+      avec les mêmes emojis, DLC et règles d'escarmouche.
+    </p>
+  </header>
+
+  <main class="layout">
+    <section class="battlefield">
+      <canvas id="battleCanvas" width="916" height="580" aria-label="Carte tactique"></canvas>
+      <div class="hud-row">
+        <button id="nextTurn">▶ Tour suivant</button>
+        <button id="toggleAuto">⏯ Auto</button>
+        <span id="phase"></span>
+      </div>
+    </section>
+
+    <aside class="intel">
+      <h2>Dossier opérationnel</h2>
+      <pre id="intelText"></pre>
+    </aside>
+  </main>
+
+  <footer>
+    <p>
+      Astuce: lancez <code>python -m http.server</code> dans le dépôt puis ouvrez
+      <code>http://localhost:8000/web/</code>.
+    </p>
+  </footer>
+
+  <script type="module" src="game-viewer.js"></script>
+</body>
+</html>
